@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +21,9 @@ import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
+    private FirebaseAuth auth;
+    private FirebaseAuth.AuthStateListener auth_listener;
+    private Button signout;
     Button getDataButton;
     Button addDataButton;
     Button clearDataButton;
@@ -82,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         getDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //retrieve specific id
                 ref.child("2").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -95,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+                auth.signOut();
             }
         });
 
