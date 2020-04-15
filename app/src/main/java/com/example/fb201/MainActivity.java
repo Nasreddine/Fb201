@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         ref = database.getReference("Order");
 
+
 //        Order o1 = new Order(1, "16", 1000);
 //        ref.child("1").setValue(o1);
 //

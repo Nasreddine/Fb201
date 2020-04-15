@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/image_trip"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/image_trip"
+        android:layout_marginLeft="10dp"
+        android:hint="Departure"
+        android:layout_centerVertical="true"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="TextView"
+        />
+
+    <TextView
+        android:id="@+id/arrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/departure"
+        android:layout_marginLeft="1dp"
+        android:hint="Arrival"
+        android:layout_centerVertical="true"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/time_departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/time_arrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:text="TextView" />
+
+</RelativeLayout>

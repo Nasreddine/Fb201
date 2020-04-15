@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         signupaccount = findViewById(R.id.signupaccount);
         signin = findViewById(R.id.signin);
 
-        auth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();// create user and log in
         auth_listener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (!task.isSuccessful()){
                             Toast.makeText(LoginActivity.this, "Registration FAILED !", Toast.LENGTH_LONG).show();
                         }
+
                     }
                 });
             }
